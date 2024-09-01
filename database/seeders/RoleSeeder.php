@@ -17,5 +17,13 @@ class RoleSeeder extends Seeder
             ['name'     => 'user'], // 1
             ['name'     => 'admin'], // 2
         ]);
+        
+        DB::table('role_ownerships')->insert([
+            [
+                'user_id' => 1,
+                'role_id' => 1
+            ],
+        ]);
+        
     }
 }
